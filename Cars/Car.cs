@@ -13,6 +13,7 @@ namespace Cars
         public string Model { get; }
         public int Year { get; }
         public decimal Price { get; }
+        //public static List<Car> CarList = new List<Car>();
 
         //constructor
         public Car()
@@ -27,8 +28,9 @@ namespace Cars
             Make = _make;
             Model = _model;
             Year = _year;
-            Price = _price;
+            Price = _price; 
         }
+    
 
         public override string ToString()
         {
@@ -39,11 +41,23 @@ namespace Cars
         {
             foreach(Car c in carlist)
             {
-                Console.WriteLine($"{carlist.IndexOf(c)}." + c.ToString()); 
+                Console.WriteLine($"{carlist.IndexOf(c)+1}." + c.ToString()); 
             }
         }
-          
+
         //Add a public static method to Car called ListCars that loops through the list and prints out each member and its index in the list. (Hint: Use a regular for loop, not a foreach loop so you  can print out the index.)
         //Add a public static method to Car called Remove which takes an integer parameter and removes the car whose index is that parameter
+
+        
+
+        public static void Remove(int index, List<Car> CarList)
+        {
+            CarList.RemoveAt(index-1);
+        }
+
+        public static void BuyBack(Car vehicle, List<Car> CarList)
+        {
+            CarList.Add(vehicle);
+        }
     }
 }
