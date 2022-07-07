@@ -18,7 +18,7 @@ namespace Cars
         //methods
         public override string ToString()
         {
-            return base.ToString() + $"\t{Mileage}";
+            return base.ToString() + $"\t{Mileage} (used car)";
         }
     }
 }

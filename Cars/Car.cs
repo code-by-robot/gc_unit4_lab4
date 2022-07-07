@@ -34,5 +34,16 @@ namespace Cars
         {
             return $"{Make}\t{Model}\t{Year}\t{Price}";
         }
+
+        public static void ListCars(List<Car> carlist)
+        {
+            foreach(Car c in carlist)
+            {
+                Console.WriteLine($"{carlist.IndexOf(c)}." + c.ToString()); 
+            }
+        }
+          
+        //Add a public static method to Car called ListCars that loops through the list and prints out each member and its index in the list. (Hint: Use a regular for loop, not a foreach loop so you  can print out the index.)
+        //Add a public static method to Car called Remove which takes an integer parameter and removes the car whose index is that parameter
     }
 }
